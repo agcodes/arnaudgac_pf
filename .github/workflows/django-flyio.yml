@@ -22,16 +22,37 @@ jobs:
                   python -m pip install --upgrade pip
                   pip install -r requirements.txt
 
+            - name: Initialize database
+              working-directory: django_cv
+              env:
+                DJANGO_SECRET_KEY: "dummy-secret-key-for-ci"
+                DJANGO_DEBUG: "True"
+                DJANGO_ALLOWED_HOSTS: "localhost"
+              run: |
+                touch db.sqlite3
+
             - name: Check Django migrations
               working-directory: django_cv
+              env:
+                DJANGO_SECRET_KEY: "dummy-secret-key-for-ci"
+                DJANGO_DEBUG: "True"
+                DJANGO_ALLOWED_HOSTS: "localhost"
               run: python manage.py migrate --check
 
             - name: Check static files
               working-directory: django_cv
+              env:
+                DJANGO_SECRET_KEY: "dummy-secret-key-for-ci"
+                DJANGO_DEBUG: "True"
+                DJANGO_ALLOWED_HOSTS: "localhost"
               run: python manage.py collectstatic --noinput --dry-run
 
             - name: Run tests
               working-directory: django_cv
+              env:
+                DJANGO_SECRET_KEY: "dummy-secret-key-for-ci"
+                DJANGO_DEBUG: "True"
+                DJANGO_ALLOWED_HOSTS: "localhost"
               run: python manage.py test
 
     deploy:
