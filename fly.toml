@@ -18,6 +18,7 @@ primary_region = 'ams'
   internal_port = 8080
   force_https = true
   min_machines_running = 1
+  hosts = ['arnaudgac-pf.fly.dev']
 
 [[vm]]
   memory = '512mb'
