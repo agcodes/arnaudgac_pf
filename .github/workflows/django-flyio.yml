@@ -22,22 +22,6 @@ jobs:
                   python -m pip install --upgrade pip
                   pip install -r requirements.txt
 
-            - name: Initialize database
-              working-directory: django_cv
-              env:
-                DJANGO_SECRET_KEY: "dummy-secret-key-for-ci"
-                DJANGO_DEBUG: "True"
-                DJANGO_ALLOWED_HOSTS: "localhost"
-              run: touch db.sqlite3
-
-            - name: Apply migrations
-              working-directory: django_cv
-              env:
-                DJANGO_SECRET_KEY: "dummy-secret-key-for-ci"
-                DJANGO_DEBUG: "True"
-                DJANGO_ALLOWED_HOSTS: "localhost"
-              run: python manage.py migrate --noinput
-
             - name: Check Django configuration
               working-directory: django_cv
               env:
@@ -77,6 +61,5 @@ jobs:
                   curl -L https://fly.io/install.sh | sh
                   export PATH="$HOME/.fly/bin:$PATH"
                   flyctl deploy --remote-only
-                  flyctl status
               env:
                   FLY_API_TOKEN: ${{ secrets.FLYCTL_TOKEN }}

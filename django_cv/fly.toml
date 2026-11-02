@@ -26,15 +26,6 @@ primary_region = 'ams'
   memory = '512mb'
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 256
-
-[[volumes]]
-  name = 'sqlite_data'
-  size = '1gb'
-
-[[mounts]]
-  source = 'sqlite_data'
-  destination = '/app'
 
 [[statics]]
   guest_path = '/app/staticfiles'

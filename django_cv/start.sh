@@ -18,16 +18,9 @@ else
 fi
 
 echo ""
-echo "Vérification des migrations..."
-python manage.py migrate --run-syncdb 2>/dev/null
-
-echo ""
-echo "Chargement des données initiales..."
-python manage.py loaddata cv/fixtures/initial_data.json 2>/dev/null || echo "Données déjà chargées ou erreur"
-
-echo ""
 echo "=========================================="
 echo "Serveur démarré sur http://localhost:8000"
+echo "(Données chargées depuis initial_data.json)"
 echo "=========================================="
 echo ""
 
