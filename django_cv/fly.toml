@@ -1,3 +1,8 @@
+# fly.toml app configuration file generated for arnaudgac-pf on 2026-11-02T21:11:02+01:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
 app = 'arnaudgac-pf'
 primary_region = 'ams'
 
@@ -10,21 +15,21 @@ primary_region = 'ams'
   DJANGO_SECRET_KEY = '@DJANGO_SECRET_KEY'
 
 [http_service]
-  internal_port = 8000
+  internal_port = 8080
   force_https = true
   min_machines_running = 1
 
   [[http_service.checks]]
-    interval = "10s"
-    timeout = "2s"
-    grace_period = "5s"
-    type = "http"
-    path = "/healthz/"
+    interval = '10s'
+    timeout = '2s'
+    grace_period = '5s'
+    path = '/healthz/'
 
 [[vm]]
   memory = '512mb'
   cpu_kind = 'shared'
   cpus = 1
+  memory_mb = 256
 
 [[statics]]
   guest_path = '/app/staticfiles'
