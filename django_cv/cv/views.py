@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.http import HttpResponse
 import json
 import os
 
@@ -92,3 +93,8 @@ def portfolio(request):
     return render(request, 'cv/portfolio.html', {
         'projects': projects,
     })
+
+
+def health_check(request):
+    """Endpoint de santé pour les checks Fly.io"""
+    return HttpResponse("OK", status=200)
