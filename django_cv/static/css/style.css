@@ -1,0 +1,80 @@
+/* Custom styles for CV */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family:
+        'Inter',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        sans-serif;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+}
+
+/* Profile card shadow */
+.profile-card {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+/* Experience cards */
+.experience-card {
+    border-left: 4px solid #4f46e5;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.experience-card:hover {
+    border-left-color: #7c3aed;
+    box-shadow: 0 10px 30px rgba(79, 70, 229, 0.15);
+}
+
+/* Skill badges */
+.skill-badge {
+    background-color: #f3f4f6;
+    color: #4b5563;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.skill-badge:hover {
+    background-color: #e5e7eb;
+    transform: translateY(-2px);
+}
+
+/* Stats numbers */
+.stats-number {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* HTMX loading state */
+.htmx-request .experience-card {
+    opacity: 0.7;
+}
+
+/* Smooth transitions */
+* {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stats-number {
+        font-size: 2rem;
+    }
+
+    .gradient-bg {
+        padding: 2rem 1rem;
+    }
+}

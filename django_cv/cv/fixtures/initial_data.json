@@ -1,0 +1,157 @@
+[
+    {
+        "model": "cv.profile",
+        "pk": 1,
+        "fields": {
+            "name": "Arnaud Gac",
+            "title": "Des défis, du code, des résultats.",
+            "description": "15 ans de projets, une même exigence : des solutions qui produisent de la valeur pour les entreprises et les utilisateurs. Développeur full-stack méthodique et pragmatique, j'aime les projets où innovation rime avec qualité du code. Explorez mon parcours et mes réalisations.",
+            "years_experience": 15,
+            "current_role": "Expert",
+            "projects_count": 50
+        }
+    },
+    {
+        "model": "cv.experience",
+        "pk": 1,
+        "fields": {
+            "company": "ZF Group",
+            "position": "Ingénieur développeur full-stack",
+            "start_date": "2021",
+            "end_date": "2026",
+            "level": "lead",
+            "description": "Conception et évolution d'architectures SI. Développement de solutions web multi-sites.",
+            "skills": "Leadership,Environnement international"
+        }
+    },
+    {
+        "model": "cv.experience",
+        "pk": 2,
+        "fields": {
+            "company": "Versa",
+            "position": "Développeur full-stack, chargé de projet",
+            "start_date": "2016",
+            "end_date": "2021",
+            "level": "confirmed",
+            "description": "Développement et intégration et de solutions pour l'industrie et la logistique. Développement d'interfaces avancées et de systèmes de suivi temps réel.",
+            "skills": "Innovation,Multi-clients"
+        }
+    },
+    {
+        "model": "cv.experience",
+        "pk": 3,
+        "fields": {
+            "company": "Jean Caby, La lampaulaise de salaisons",
+            "position": "Développeur d'applications",
+            "start_date": "2011",
+            "end_date": "2016",
+            "level": "junior",
+            "description": "Développement d'applications pour le suivi de la production et l'interfaçage avec les systèmes MES. Conception de logiciels pour la gestion de l'ordonnancement et des expéditions.",
+            "skills": "Proche des utilisateurs"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 1,
+        "fields": {
+            "name": "C#",
+            "category": ".NET"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 2,
+        "fields": {
+            "name": ".NET",
+            "category": ".NET"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 3,
+        "fields": {
+            "name": "Javascript",
+            "category": "Frontend"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 4,
+        "fields": {
+            "name": "TypeScript",
+            "category": "Frontend"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 5,
+        "fields": {
+            "name": "Vue JS",
+            "category": "Frontend"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 6,
+        "fields": {
+            "name": "React",
+            "category": "Frontend"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 7,
+        "fields": {
+            "name": "python",
+            "category": "Backend"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 8,
+        "fields": {
+            "name": "MS SQL Server",
+            "category": "Database"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 9,
+        "fields": {
+            "name": "Docker",
+            "category": "DevOps"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 10,
+        "fields": {
+            "name": "CI/CD",
+            "category": "DevOps"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 11,
+        "fields": {
+            "name": "DevOps",
+            "category": "DevOps"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 12,
+        "fields": {
+            "name": "ERP",
+            "category": "Enterprise"
+        }
+    },
+    {
+        "model": "cv.skill",
+        "pk": 13,
+        "fields": {
+            "name": "MES",
+            "category": "Enterprise"
+        }
+    }
+]

@@ -1,0 +1,16 @@
+<nav class="bg-white shadow-sm border-b">
+    <div class="max-w-[1140px] mx-auto px-4">
+        <div class="flex justify-center md:justify-between items-center py-4">
+            <div class="flex items-center space-x-8">
+                <a href="{% url 'home' %}" 
+                   class="text-gray-700 hover:text-blue-600 font-semibold transition-colors {% if active_page == 'home' %}text-blue-600 border-b-2 border-blue-600 pb-1{% endif %}">
+                    Accueil
+                </a>
+                <a href="{% url 'portfolio' %}" 
+                   class="text-gray-700 hover:text-blue-600 font-semibold transition-colors {% if active_page == 'portfolio' %}text-blue-600 border-b-2 border-blue-600 pb-1{% endif %}">
+                    Portfolio
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>

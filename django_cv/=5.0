@@ -1,0 +1,21 @@
+Collecting Django
+  Using cached django-6.1.2-py3-none-any.whl.metadata (3.9 kB)
+Collecting python-dotenv
+  Using cached python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+Collecting django-htmx
+  Using cached django_htmx-1.29.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting whitenoise
+  Using cached whitenoise-6.12.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting asgiref>=3.9.1 (from Django)
+  Using cached asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+Collecting sqlparse>=0.5.0 (from Django)
+  Using cached sqlparse-0.6.0-py3-none-any.whl.metadata (6.0 kB)
+Using cached django-6.1.2-py3-none-any.whl (8.4 MB)
+Using cached python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Using cached django_htmx-1.29.0-py3-none-any.whl (224 kB)
+Using cached whitenoise-6.12.0-py3-none-any.whl (20 kB)
+Using cached asgiref-3.13.0-py3-none-any.whl (27 kB)
+Using cached sqlparse-0.6.0-py3-none-any.whl (50 kB)
+Installing collected packages: whitenoise, sqlparse, python-dotenv, asgiref, Django, django-htmx
+
+Successfully installed Django-6.1.2 asgiref-3.13.0 django-htmx-1.29.0 python-dotenv-1.2.4 sqlparse-0.6.0 whitenoise-6.12.0

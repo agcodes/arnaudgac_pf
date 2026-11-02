@@ -1,0 +1,128 @@
+[
+  {
+    "title": "Application web SPC",
+    "description": "Application web vue.js de visualisation des données de production. API REST .net core. Base : MS SQL Server",
+    "thumbnail": "images/spc-tb.png",
+    "largeImage": "images/spc.png",
+    "year": "2024",
+    "technos": "C# .NET · VUE.JS",
+    "link": ""
+  },
+  {
+    "title": "Application web suivi d'activité",
+    "description": "Application web. Développements interface avec MES, internationalisation (C# ASP net, vue.js). Base : MS SQL Server",
+    "thumbnail": "images/app-hb-web-1-tb.png",
+    "largeImage": "images/app-hb-web-1.png",
+    "year": "2022",
+    "technos": "C# ASP .NET",
+    "link": ""
+  },
+  {
+    "title": "Application de production",
+    "description": "Application opérateur C# .net, WPF, API REST swagger, webservice SOAP",
+    "thumbnail": "images/app_packing-tb.png",
+    "largeImage": "images/app_packing.png",
+    "year": "2021",
+    "technos": "C# .NET",
+    "link": ""
+  },
+  {
+    "title": "Application web eztrack",
+    "description": "Recherche et affichage des données d'expédition (PHP Symfony, javascript)",
+    "thumbnail": "images/eztrack-tb.png",
+    "largeImage": "images/eztrack.png",
+    "year": "2017",
+    "technos": "PHP symfony",
+    "link": ""
+  },
+  {
+    "title": "Flash pallet",
+    "description": "Affichage en temps réel de l'expédition sur écran TV",
+    "thumbnail": "images/fp-screen-tb.png",
+    "largeImage": "images/fp-screen.png",
+    "year": "2016",
+    "technos": "C# Windev",
+    "link": ""
+  },
+  {
+    "title": "Application TRS",
+    "description": "Application de suivi des indicateurs de production",
+    "thumbnail": "images/trs_menu-tb.jpg",
+    "largeImage": "images/trs_menu.jpg",
+    "year": "2012",
+    "technos": "Windev",
+    "link": ""
+  },
+  {
+    "title": "Application mobile Sport app",
+    "description": "Application mobile react native (typescript) de suivi des activités sportives",
+    "thumbnail": "images/sportapp-tb.png",
+    "largeImage": "images/sportapp.png",
+    "year": "2026",
+    "technos": "REACT JS",
+    "link": ""
+  },
+  {
+    "title": "Application web Yemewo",
+    "description": "Application de quiz (vue.js, typescript)",
+    "thumbnail": "images/yemewo-tb.png",
+    "largeImage": "images/yemewo.png",
+    "year": "2024",
+    "technos": "VUE JS · NODE JS",
+    "link": "https://yemewo.una.ovh/"
+  },
+  {
+    "title": "Application météo",
+    "description": "Application météo",
+    "thumbnail": "images/app-weather-tb.png",
+    "largeImage": "images/app-weather.png",
+    "year": "2026",
+    "technos": "Angular · HTML · CSS",
+    "link": "https://glesker.una.ovh/"
+  },
+  {
+    "title": "Application web Univers logique",
+    "description": "Application de visualisation de formes géométriques (ember js, three.js)",
+    "thumbnail": "images/universlogique-tb.png",
+    "largeImage": "images/universlogique.png",
+    "year": "2022",
+    "technos": "EMBER JS",
+    "link": ""
+  },
+  {
+    "title": "ChatBot",
+    "description": "Application chatbot",
+    "thumbnail": "images/app-chatbot-tb.png",
+    "largeImage": "images/app-chatbot.png",
+    "year": "2026",
+    "technos": "Angular · NODE JS",
+    "link": "https://yemewo-chat.una.ovh/"
+  },
+  {
+    "title": "Application web test SEO",
+    "description": "Application web d'analyse SEO (PHP, Symfony). Utilisation de l'API Google",
+    "thumbnail": "images/seo-blogapps-tb.png",
+    "largeImage": "images/seo-blogapps.png",
+    "year": "2015",
+    "technos": "PHP Symfony",
+    "link": "https://blogapps.una.ovh/"
+  },
+  {
+    "title": "Design web",
+    "description": "Design web. Responsive. HTML5, CSS, React js. Style minimaliste",
+    "thumbnail": "images/design-web-4-tb.png",
+    "largeImage": "images/design-web-4.png",
+    "year": "2021",
+    "technos": "REACT JS · CSS",
+    "link": ""
+  },
+  {
+    "title": "Design web",
+    "description": "Design web. Responsive. Optimisation SEO, HTML5, CSS",
+    "thumbnail": "images/design-web-3-tb.png",
+    "largeImage": "images/design-web-3.png",
+    "year": "2017",
+    "technos": "HTML · CSS",
+    "link": ""
+  }
+]

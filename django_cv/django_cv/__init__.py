@@ -1,0 +1,1 @@
+# Django CV project package

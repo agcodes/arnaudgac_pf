@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <title>{% block title %}Arnaud Gac - CV{% endblock %}</title>
+    <meta name="description" content="CV d'Arnaud Gac - Développeur full-stack avec 15 ans d'expérience">
+    
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    {% block head %}{% endblock %}
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Messages -->
+    {% if messages %}
+        <div class="fixed top-4 right-4 z-50 space-y-2">
+            {% for message in messages %}
+                <div class="p-4 rounded-lg shadow-lg animate-fade-in {% if message.tags == 'success' %}bg-green-600 text-white{% elif message.tags == 'error' %}bg-red-600 text-white{% else %}bg-blue-600 text-white{% endif %}">
+                    <button onclick="this.parentElement.style.display='none'" class="float-right text-xl font-bold hover:opacity-75">&times;</button>
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+        <style>
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-fade-in {
+                animation: fadeIn 0.3s ease-out;
+            }
+        </style>
+    {% endif %}
+    
+    {% block body %}{% endblock %}
+    
+    <!-- Custom JS -->
+    <script src="{% static 'js/main.js' %}"></script>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>
