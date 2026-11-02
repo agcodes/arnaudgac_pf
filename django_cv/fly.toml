@@ -10,9 +10,9 @@ primary_region = 'ams'
   dockerfile = 'Dockerfile'
 
 [env]
-  DJANGO_ALLOWED_HOSTS = 'arnaudgac-pf.fly.dev,localhost,127.0.0.1'
+  DJANGO_ALLOWED_HOSTS = '@DJANGO_ALLOWED_HOSTS'
   DJANGO_DEBUG = 'False'
-  DJANGO_SECRET_KEY = '@django-secret-key'
+  DJANGO_SECRET_KEY = '@DJANGO_SECRET_KEY'
 
 [http_service]
   internal_port = 8000
