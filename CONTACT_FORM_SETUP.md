@@ -12,14 +12,14 @@ Ce document explique comment configurer l'envoi d'emails pour le formulaire de c
     - Gère l'affichage et la soumission du formulaire
     - Envoie les données par email
 
-3. **URL** : `django_cv/urls.py`
+3. **URL** : `/urls.py`
     - URL : `/contact/` avec nom `contact`
 
 4. **Backend email** : `cv/email_backends.py`
     - Backend personnalisé pour l'API Infomaniak avec OAuth2
     - Gestion automatique des tokens d'accès
 
-5. **Configuration email** : `django_cv/settings.py`
+5. **Configuration email** : `/settings.py`
     - Paramètres de base configurés
     - En développement : utilise `console.EmailBackend` (affiche les emails dans la console)
 

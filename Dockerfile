@@ -8,9 +8,8 @@ ENV PYTHONUNBUFFERED 1
 # Set work directory
 WORKDIR /app
 
-# Install system dependencies
+# Install minimal system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
@@ -18,13 +17,18 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy project
-COPY . /app/
+COPY . .
+
+# Set Django environment variables for build-time (collectstatic needs these)
+ENV DJANGO_SECRET_KEY=dummy-for-build \
+    DJANGO_DEBUG=True \
+    DJANGO_ALLOWED_HOSTS=localhost
 
 # Collect static files
 RUN python manage.py collectstatic --noinput
 
-# Expose the port the app runs on
-EXPOSE 8000
+# Expose the port the app runs on (must match fly.toml internal_port=8080)
+EXPOSE 8080
 
 # Command to run the application using Gunicorn
 CMD ["gunicorn", "--bind", "0.0.0.0:8080", "django_cv.wsgi:application"]
