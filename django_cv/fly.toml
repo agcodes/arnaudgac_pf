@@ -1,27 +1,33 @@
-app = "django-cv"
-primary_region = "cdg"
+# fly.toml app configuration file generated for arnaudgac-pf on 2026-11-02T17:36:08Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'arnaudgac-pf'
+primary_region = 'ams'
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [env]
-  DJANGO_DEBUG = "False"
-  DJANGO_SECRET_KEY = "@django-secret-key"
-  DJANGO_ALLOWED_HOSTS = "@allowed-hosts"
+  DJANGO_ALLOWED_HOSTS = '@allowed-hosts'
+  DJANGO_DEBUG = 'False'
+  DJANGO_SECRET_KEY = '@django-secret-key'
 
 [http_service]
-  internal_port = 8000
+  internal_port = 8080
   force_https = true
-  auto_stop_machines = true
+  auto_stop_machines = 'stop'
   auto_start_machines = true
   min_machines_running = 0
-  processes = ["app"]
-
-[[statics]]
-  guest_path = "/app/staticfiles"
-  url_prefix = "/static/"
+  processes = ['app']
 
 [[vm]]
-  memory = "512mb"
-  cpu_kind = "shared"
+  memory = '512mb'
+  cpu_kind = 'shared'
   cpus = 1
+  memory_mb = 256
+
+[[statics]]
+  guest_path = '/app/staticfiles'
+  url_prefix = '/static/'
