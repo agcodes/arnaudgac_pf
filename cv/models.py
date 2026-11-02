@@ -45,7 +45,8 @@ class Profile(models.Model):
     years_experience = models.IntegerField(default=0, verbose_name="Années d'expérience")
     current_role = models.CharField(max_length=100, blank=True, verbose_name="Rôle actuel")
     projects_count = models.IntegerField(default=0, verbose_name="Nombre de projets")
-    
+    github = models.CharField(max_length=200, verbose_name="Profil GitHub")
+    linkedin = models.CharField(max_length=200, verbose_name="Profil LinkedIn", blank=True)
     class Meta:
         verbose_name = "Profil"
         verbose_name_plural = "Profils"
