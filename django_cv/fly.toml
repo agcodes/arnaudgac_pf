@@ -22,6 +22,14 @@ primary_region = 'ams'
   min_machines_running = 1
   processes = ['app']
 
+  # 👇 AJOUTE CE BLOC
+  [http_service.checks]
+    [http_service.checks.http]
+      path = "/"
+      interval = 10000    # Vérifie toutes les 10 secondes
+      timeout = 2000       # Timeout de 2 secondes
+      grace_period = "5s"  # Attends 5s au démarrage
+
 [[vm]]
   memory = '512mb'
   cpu_kind = 'shared'
