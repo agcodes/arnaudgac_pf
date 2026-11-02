@@ -1,8 +1,3 @@
-# fly.toml configuration file generated for arnaudgac-pf on 2026-11-02T17:36:08Z
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
 app = 'arnaudgac-pf'
 primary_region = 'ams'
 
@@ -20,7 +15,6 @@ primary_region = 'ams'
   auto_stop_machines = 'off'
   auto_start_machines = true
   min_machines_running = 1
-  processes = ['app']
 
   [[http_service.checks]]
     interval = "10s"
