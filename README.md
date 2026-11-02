@@ -1,6 +1,6 @@
-# Django CV - Arnaud Gac
+# Django CV
 
-Projet Django avec HTMX pour afficher le CV d'Arnaud Gac.
+Projet Django avec HTMX pour afficher le CV
 
 ## 🚀 Démarrage rapide
 
@@ -70,7 +70,6 @@ django_cv/
 - **Django** : Backend robuste en Python
 - **HTMX** : Interactions dynamiques sans JavaScript complexe
 - **Tailwind CSS** : Design moderne et responsive
-- **SQLite** : Base de données intégrée
 - **WhiteNoise** : Gestion des fichiers statiques
 - **Admin Django** : Interface d'administration pour gérer le CV
 
@@ -79,15 +78,15 @@ django_cv/
 ### Modifier le contenu du CV
 
 1. **Via l'interface admin** (recommandé) :
-   ```bash
-   python manage.py createsuperuser
-   python manage.py runserver
-   # Accéder à http://localhost:8000/admin
-   ```
+
+    ```bash
+    python manage.py createsuperuser
+    python manage.py runserver
+    # Accéder à http://localhost:8000/admin
+    ```
 
 2. **Modifier les fixtures** :
-   - Éditer `cv/fixtures/initial_data.json`
-   - Recharger les données : `python manage.py loaddata cv/fixtures/initial_data.json`
+    - Éditer `cv/fixtures/initial_data.json`
 
 ### Modifier le design
 
@@ -98,15 +97,18 @@ django_cv/
 ## 📊 Modèles de données
 
 ### Profile
+
 - Nom, titre, description
 - Années d'expérience, rôle actuel, nombre de projets
 
 ### Experience
+
 - Entreprise, poste, dates
 - Niveau (Junior, Confirmé, Expert, Tech Lead)
 - Description et compétences
 
 ### Skill
+
 - Nom de la compétence
 - Catégorie (Backend, Frontend, Database, DevOps, Enterprise)
 
@@ -127,17 +129,16 @@ gunicorn django_cv.wsgi:application --bind 0.0.0.0:8000
 
 ### Variables d'environnement
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `DJANGO_SECRET_KEY` | Clé secrète Django | requis |
-| `DJANGO_DEBUG` | Mode debug | True |
-| `DJANGO_ALLOWED_HOSTS` | Hosts autorisés | localhost |
+| Variable               | Description        | Default   |
+| ---------------------- | ------------------ | --------- |
+| `DJANGO_SECRET_KEY`    | Clé secrète Django | requis    |
+| `DJANGO_DEBUG`         | Mode debug         | True      |
+| `DJANGO_ALLOWED_HOSTS` | Hosts autorisés    | localhost |
 
 ## 🎯 Technologies utilisées
 
 - **Backend**: Django, Python
 - **Frontend**: HTMX, Tailwind CSS, Vanilla JavaScript
-- **Base de données**: SQLite (configurable pour PostgreSQL/MySQL)
 - **Déploiement**: WhiteNoise, Gunicorn
 
 ## 📝 Notes
@@ -145,6 +146,7 @@ gunicorn django_cv.wsgi:application --bind 0.0.0.0:8000
 Ce projet est conçu pour être simple à déployer et à maintenir. L'utilisation de HTMX permet d'ajouter des interactions dynamiques sans la complexité d'un framework JavaScript complet.
 
 Pour ajouter des fonctionnalités supplémentaires :
+
 - Créer de nouvelles vues Django
 - Utiliser les attributs HTMX pour des interactions AJAX
 - Personnaliser les templates avec Tailwind CSS
