@@ -10,7 +10,7 @@ primary_region = 'ams'
   dockerfile = 'Dockerfile'
 
 [env]
-  DJANGO_ALLOWED_HOSTS = '@allowed-hosts'
+  DJANGO_ALLOWED_HOSTS = 'arnaudgac-pf.fly.dev,localhost,127.0.0.1'
   DJANGO_DEBUG = 'False'
   DJANGO_SECRET_KEY = '@django-secret-key'
 
