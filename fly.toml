@@ -1,4 +1,4 @@
-# fly.toml configuration file generated for arnaudgac-pf on 2026-11-02T21:11:02+01:00
+# fly.toml app configuration file generated for arnaudgac-pf on 2026-11-02T19:58:34Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -18,7 +18,7 @@ primary_region = 'ams'
   internal_port = 8080
   force_https = true
   min_machines_running = 1
-  
+
 [[vm]]
   memory = '512mb'
   cpu_kind = 'shared'
