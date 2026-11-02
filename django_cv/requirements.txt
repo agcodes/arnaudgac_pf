@@ -3,3 +3,4 @@ python-dotenv>=1.0
 django-htmx>=1.15
 whitenoise>=6.6
 requests>=2.34.0
+gunicorn>=21.0

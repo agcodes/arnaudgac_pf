@@ -1,0 +1,52 @@
+name: Django CI/CD - Deploy to Fly.io
+
+on:
+    push:
+        branches: [main, dev, master]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: '3.14'
+
+            - name: Install dependencies
+              working-directory: django_cv
+              run: |
+                  python -m pip install --upgrade pip
+                  pip install -r requirements.txt
+
+            - name: Check Django migrations
+              working-directory: django_cv
+              run: python manage.py migrate --check
+
+            - name: Check static files
+              working-directory: django_cv
+              run: python manage.py collectstatic --noinput --dry-run
+
+            - name: Run tests
+              working-directory: django_cv
+              run: python manage.py test
+
+    deploy:
+        needs: test
+        runs-on: ubuntu-latest
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Install flyctl and deploy
+              if: github.ref == 'refs/heads/master'
+              run: |
+                  curl -L https://fly.io/install.sh | sh
+                  export PATH="$HOME/.fly/bin:$PATH"
+                  flyctl deploy --remote-only
+              env:
+                  FLY_API_TOKEN: ${{ secrets.FLYCTL_TOKEN }}
