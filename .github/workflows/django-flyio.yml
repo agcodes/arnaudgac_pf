@@ -72,6 +72,7 @@ jobs:
 
             - name: Install flyctl and deploy
               if: github.ref == 'refs/heads/master'
+              working-directory: django_cv
               run: |
                   curl -L https://fly.io/install.sh | sh
                   export PATH="$HOME/.fly/bin:$PATH"
