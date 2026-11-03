@@ -83,31 +83,13 @@
         "link": ""
     },
     {
-        "title": "Application web Yemewo",
-        "description": "Application de quiz (vue.js, typescript)",
-        "thumbnail": "images/yemewo-tb.png",
-        "largeImage": "images/yemewo.png",
-        "year": "2024",
-        "technos": "VUE JS · NODE JS",
-        "link": "https://yemewo.una.ovh/"
-    },
-    {
-        "title": "Application météo",
-        "description": "Application météo",
-        "thumbnail": "images/app-weather-tb.png",
-        "largeImage": "images/app-weather.png",
-        "year": "2026",
-        "technos": "Angular · HTML · CSS",
-        "link": "https://glesker.una.ovh/"
-    },
-    {
-        "title": "Application web Univers logique",
-        "description": "Application de visualisation de formes géométriques (ember js, three.js)",
-        "thumbnail": "images/universlogique-tb.png",
-        "largeImage": "images/universlogique.png",
-        "year": "2022",
-        "technos": "EMBER JS",
-        "link": ""
+        "title": "Application web test SEO",
+        "description": "Application web d'analyse SEO (PHP, Symfony). Utilisation de l'API Google",
+        "thumbnail": "images/seo-blogapps-tb.png",
+        "largeImage": "images/seo-blogapps.png",
+        "year": "2015",
+        "technos": "PHP Symfony",
+        "link": "https://blogapps.una.ovh/"
     },
     {
         "title": "ChatBot",
@@ -119,13 +101,31 @@
         "link": "https://yemewo-chat.una.ovh/"
     },
     {
-        "title": "Application web test SEO",
-        "description": "Application web d'analyse SEO (PHP, Symfony). Utilisation de l'API Google",
-        "thumbnail": "images/seo-blogapps-tb.png",
-        "largeImage": "images/seo-blogapps.png",
-        "year": "2015",
-        "technos": "PHP Symfony",
-        "link": "https://blogapps.una.ovh/"
+        "title": "Application météo",
+        "description": "Application météo",
+        "thumbnail": "images/app-weather-tb.png",
+        "largeImage": "images/app-weather.png",
+        "year": "2026",
+        "technos": "Angular · HTML · CSS",
+        "link": "https://glesker.una.ovh/"
+    },
+    {
+        "title": "Application web Yemewo",
+        "description": "Application de quiz (vue.js, typescript)",
+        "thumbnail": "images/yemewo-tb.png",
+        "largeImage": "images/yemewo.png",
+        "year": "2024",
+        "technos": "VUE JS · NODE JS",
+        "link": "https://yemewo.una.ovh/"
+    },
+    {
+        "title": "Application web Univers logique",
+        "description": "Application de visualisation de formes géométriques (ember js, three.js)",
+        "thumbnail": "images/universlogique-tb.png",
+        "largeImage": "images/universlogique.png",
+        "year": "2022",
+        "technos": "EMBER JS",
+        "link": ""
     },
     {
         "title": "Design web",
