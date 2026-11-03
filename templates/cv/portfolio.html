@@ -8,8 +8,11 @@
 <style>
     .card {
         transition: all 0.3s ease;
+        border: 1px solid #a2acc0;
     }
-    
+    .card-img-top {
+        border-bottom: 1px solid #a2acc0;
+    }
     .card:hover {
         transform: translateY(-1px);
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15) !important;
@@ -106,7 +109,7 @@
 
 <div class="mx-auto max-w-[1140px] px-4 py-8">
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-7">
         <!-- Boucle sur les projets -->
         {% for project in projects %}
         <div class="col">
