@@ -43,13 +43,13 @@
                 <p class="text-xl md:text-2xl mb-6">{{ profile.title }}</p>
                 <div class="m-4">
                     {% if profile.github %}
-                        <a href="https://github.com/{{ profile.github|github_username }}" target="_blank" rel="noopener noreferrer" class="m-2 inline-block">
+                        <a title="GitHub" href="https://github.com/{{ profile.github|github_username }}" target="_blank" rel="noopener noreferrer" class="m-2 inline-block">
                             <i class="bi-github text-2xl"></i>
                         </a>
                     {% endif %}
 
                     {% if profile.linkedin %}
-                        <a href="{{ profile.linkedin }}" target="_blank" rel="noopener noreferrer" class="text-white m-2 hover:text-gray-300 transition-colors">
+                        <a title="LinkedIn" href="{{ profile.linkedin }}" target="_blank" rel="noopener noreferrer" class="text-white m-2 hover:text-gray-300 transition-colors">
                             <i class="bi-linkedin text-2xl"></i>
                         </a>
                     {% endif %}

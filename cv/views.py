@@ -103,3 +103,65 @@ def health_check(request):
 def handler404(request, exception):
     """Handler personnalisé pour les erreurs 404"""
     return render(request, '404.html', status=404)
+
+
+def load_enterprise_projects():
+    """Charge les projets d'entreprise depuis le fichier JSON"""
+    try:
+        json_path = os.path.join(os.path.dirname(__file__), 'data', 'enterprise_projects.json')
+        with open(json_path, 'r', encoding='utf-8') as f:
+            projects = json.load(f)
+        return projects
+    except Exception as e:
+        print(f"Erreur lors du chargement des projets d'entreprise: {e}")
+        return []
+
+
+def enterprise_projects(request):
+    """Vue pour afficher la synthèse des projets d'entreprise"""
+    projects = load_enterprise_projects()
+    
+    # Compter les statistiques
+    total_projects = len(projects)
+    clients = set(p['client'] for p in projects)
+    years = sorted(set(p['year'] for p in projects))
+    
+    # Compter par entreprise avec pourcentages
+    companies = {}
+    for project in projects:
+        company = project.get('company', 'Autres')
+        if company not in companies:
+            companies[company] = {'count': 0, 'percentage': 0}
+        companies[company]['count'] += 1
+    
+    # Calculer les pourcentages
+    for company in companies:
+        companies[company]['percentage'] = (companies[company]['count'] / total_projects * 100) if total_projects > 0 else 0
+    
+    # Compter les services (Dev, Tests, Déploiement)
+    dev_count = sum(1 for p in projects if p['dev'])
+    tests_count = sum(1 for p in projects if p['tests'])
+    deployment_count = sum(1 for p in projects if p['deployment'])
+    
+    # Compter par année pour l'histogramme
+    projects_by_year = {}
+    for project in projects:
+        year = project['year']
+        if year not in projects_by_year:
+            projects_by_year[year] = 0
+        projects_by_year[year] += 1
+    
+    # Trier par année
+    projects_by_year = dict(sorted(projects_by_year.items()))
+    
+    return render(request, 'cv/enterprise_projects.html', {
+        'projects': projects,
+        'total_projects': total_projects,
+        'clients_count': len(clients),
+        'years': years,
+        'companies': companies,
+        'dev_count': dev_count,
+        'tests_count': tests_count,
+        'deployment_count': deployment_count,
+        'projects_by_year': projects_by_year,
+    })
