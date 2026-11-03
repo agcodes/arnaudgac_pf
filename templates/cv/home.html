@@ -64,10 +64,14 @@
                         <span class="stats-number text-blue-600">{{ profile.years_experience }}</span>
                         <span class="text-gray-600 text-sm mt-2">années<br />exp.</span>
                     </div>
+                    <a href="{% url 'portfolio' %}">
                     <div class="flex flex-col items-center">
-                        <span class="stats-number text-green-600">+{{ profile.projects_count }}</span>
-                        <span class="text-gray-600 text-sm mt-2">projets</span>
+                        
+                            <span class="stats-number text-green-600">+{{ profile.projects_count }}</span>
+                            <span class="text-gray-600 text-sm mt-2">projets</span>
+                       
                     </div>
+                     </a>
                     <div class="flex flex-col items-center col-span-2">
                         <div class="flex flex-wrap gap-1">
                             {% for category, skills in skills_by_category.items %}

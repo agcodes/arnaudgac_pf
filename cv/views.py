@@ -98,3 +98,8 @@ def portfolio(request):
 def health_check(request):
     """Endpoint de santé pour les checks Fly.io"""
     return HttpResponse("OK", status=200)
+
+
+def handler404(request, exception):
+    """Handler personnalisé pour les erreurs 404"""
+    return render(request, '404.html', status=404)
